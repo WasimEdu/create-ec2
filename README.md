@@ -16,4 +16,3 @@ This script uses Boto3 to launch an EC2 instance on AWS. It allows you to specif
 
    ```bash
    git clone https://github.com/WasimEdu/create-ec2.git
-   cd ec2-instance-launcher
