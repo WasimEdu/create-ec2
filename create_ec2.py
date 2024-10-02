@@ -18,12 +18,11 @@ response = ec2.run_instances(
 
 # Geting the Instance ID of the newly launched instance
 instance_id = response['Instances'][0]['InstanceId']
-print(f"Launching instance: {instance_id}")
-
+print(f"Instance ID: {instance_id}")
 
 # Wait for the instance to be in running state
 print("Waiting for instance to be in running state....")
-ec2.get_waiter("running_instance").wait(InstanceIds=[instance_id])
+ec2.get_waiter('instance_running').wait(InstanceIds = [instance_id])
 
 
 # describing the instance
